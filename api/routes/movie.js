@@ -1,21 +1,13 @@
 const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
+
+const HTTP_RESPONSE = require('../models/httpResponse')
 const Movie = require('../models/movie')
 
-router.get('/', async (req, res) => {
-//    await Movie.find()
-//         .select('_id')
-//         .exec()
-//         .then(docs => {
-//             console.log(docs)
-//             res.status(200).json({ docs: docs })
-//         })
-//         .catch(err => {
-//             console.log(err)
-//             res.status(500).json({ error: "error" })
-//         })
-const product = await Movie.find()
-  res.json(product)
+router.get('/getAlldata', async (req, res) => {
+const product = await Movie.find().then(data =>{
+    res.status(200).json(HTTP_RESPONSE.SUCCESS(data))
+})
 })
 module.exports = router

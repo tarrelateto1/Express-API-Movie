@@ -23,7 +23,7 @@ app.use(bodyParser.json())
 
 // save ลง database (return เป็น Promise)
 
-app.use('/test',movieRoute)
+app.use('/api/v1/movie',movieRoute)
 
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*')
@@ -40,7 +40,7 @@ app.use((req, res, next) => {
 
 
 app.use((req, res, next) => {
-    const error = new Error('N ot found')
+    const error = new Error('Not found')
     error.status = 404
     next(error)
 })
