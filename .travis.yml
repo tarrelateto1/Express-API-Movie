@@ -39,6 +39,6 @@ before_install:
     fi
 script:
   # Run test script
-  - npm run test-ci
+  - npm start
   # Run linting
-  - npm run lint
+  # - npm run lint
