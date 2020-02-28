@@ -2,10 +2,9 @@ const http = require('http')
 const app = require('./app')
 
 const port = process.env.port || 5000
-var server_host = process.env.YOUR_HOST || '0.0.0.0';
 
 const server = http.createServer(app)
 
-server.listen(port,server_host,()=>{
+server.listen(5000,'0.0.0.0',()=>{
     console.log("server start at prot 5000")
 })
