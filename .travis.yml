@@ -37,8 +37,8 @@ before_install:
       npm prune
       npm rebuild
     fi
-script:
+# script:
   # Run test script
-  - npm start
+  # - npm start
   # Run linting
   # - npm run lint
