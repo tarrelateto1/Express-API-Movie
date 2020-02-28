@@ -1,10 +1,10 @@
 const http = require('http')
 const app = require('./app')
 
-const port = process.env.port || 3000
+const port = process.env.port || 5000
 
 const server = http.createServer(app)
 
 server.listen(port,()=>{
-    console.log("server start at prot 3000")
+    console.log("server start at prot 5000")
 })
